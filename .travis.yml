@@ -45,10 +45,10 @@ jobs:
       - dotnet restore
       - dotnet build --configuration $CONFIGURATION
       - export TRANSPORT_SECURITY=OFF; dotnet test --configuration $CONFIGURATION test/Novell.Directory.Ldap.NETStandard.FunctionalTests/Novell.Directory.Ldap.NETStandard.FunctionalTests.csproj -f net5
-      - export TRANSPORT_SECURITY=SSL; dotnet test --configuration $CONFIGURATION test/Novell.Directory.Ldap.NETStandard.FunctionalTests/Novell.Directory.Ldap.NETStandard.FunctionalTests.csproj -f net5
-      - export TRANSPORT_SECURITY=TLS; dotnet test --configuration $CONFIGURATION test/Novell.Directory.Ldap.NETStandard.FunctionalTests/Novell.Directory.Ldap.NETStandard.FunctionalTests.csproj -f net5
       - export TRANSPORT_SECURITY=OFF; dotnet test --configuration $CONFIGURATION test/Novell.Directory.Ldap.NETStandard.FunctionalTests/Novell.Directory.Ldap.NETStandard.FunctionalTests.csproj -f netcoreapp3.1
+      - export TRANSPORT_SECURITY=SSL; dotnet test --configuration $CONFIGURATION test/Novell.Directory.Ldap.NETStandard.FunctionalTests/Novell.Directory.Ldap.NETStandard.FunctionalTests.csproj -f net5
       - export TRANSPORT_SECURITY=SSL; dotnet test --configuration $CONFIGURATION test/Novell.Directory.Ldap.NETStandard.FunctionalTests/Novell.Directory.Ldap.NETStandard.FunctionalTests.csproj -f netcoreapp3.1
+      - export TRANSPORT_SECURITY=TLS; dotnet test --configuration $CONFIGURATION test/Novell.Directory.Ldap.NETStandard.FunctionalTests/Novell.Directory.Ldap.NETStandard.FunctionalTests.csproj -f net5
       - export TRANSPORT_SECURITY=TLS; dotnet test --configuration $CONFIGURATION test/Novell.Directory.Ldap.NETStandard.FunctionalTests/Novell.Directory.Ldap.NETStandard.FunctionalTests.csproj -f netcoreapp3.1
       - dotnet test --configuration $CONFIGURATION test/Novell.Directory.Ldap.NETStandard.UnitTests/Novell.Directory.Ldap.NETStandard.UnitTests.csproj -f net5
       - dotnet test --configuration $CONFIGURATION test/Novell.Directory.Ldap.NETStandard.UnitTests/Novell.Directory.Ldap.NETStandard.UnitTests.csproj -f netcoreapp3.1
