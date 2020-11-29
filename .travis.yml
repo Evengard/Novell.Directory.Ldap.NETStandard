@@ -28,9 +28,9 @@ addons:
     - gnutls-bin
     - ssl-cert
     - slapd
+    - dotnet-sdk-3.1
 
 before_script:
-  - sudo apt-get install dotnet-sdk-3.1
   - chmod ugo+x configure-opendj.sh
   - chmod ugo+x configure-openldap.sh
   - ./configure-opendj.sh
